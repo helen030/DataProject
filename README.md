@@ -20,17 +20,20 @@ The first step after loading the data into Power BI is data cleaning. This inclu
 
 Then, I split the dataset into different dimension and fact tables to create a data model based on the Star Schema approach. This enhanced the data integrity and allowed for more accurate querying, filtering and slicing of data. 
 
-![Snap_Count](https://github.com/user-attachments/assets/8a884146-4322-488e-9ce5-5c64c08aede5)
+<img width="504" alt="Screenshot 2024-09-18 152146" src="https://github.com/user-attachments/assets/4b78d83a-4512-4610-81e2-f87d1e03cced">
+
 *Fig 2. Star Schema data model.*
 
 ### Dashboard Building
 
 With the processed data, I created a GBV dashboard that presents key insights on hotspots and temporal patterns, victim vulnerability, perpetrator profiles, and program impacts. The dashboard's visualisations help inform the organisation's decision-making process and guide targeted efforts to reduce case frequency, better victim support, and more effective use of resources.
 
-![Snap_Count](https://github.com/user-attachments/assets/7f58cb07-f310-47df-9009-247b97eb00ec)
+<img width="959" alt="Screenshot 2024-09-18 152547" src="https://github.com/user-attachments/assets/19f2b36c-fe62-4ee9-a8cc-955da8ffbe56">
+
 *Fig 3. Overview page of the dashboard.*
 
 In addition, I also added slicers and navigation buttons between pages to the dashboard. These slicers allow the user to filter the data by various criteria such as time, victim's gender, and slum areas. These provide a more dynamic and interactive user experience, allowing the user to explore the data in greater detail and gain deeper insights.
 
-![Snap_Count](https://github.com/user-attachments/assets/bda4d83c-9d34-4983-be9c-91ca5ca400ba)
+<img width="755" alt="Screenshot 2024-09-18 154017" src="https://github.com/user-attachments/assets/a938009d-8b2f-4dd3-b92a-36db2ee3f283">
+
 *Fig 4. Slicers in the dashboard.*
