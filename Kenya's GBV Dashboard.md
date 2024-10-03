@@ -1,6 +1,6 @@
-# Gender-Based Violence Dashboard
+# Kenya's Gender-Based Violence Dashboard
 
-**Code:** https://app.powerbi.com/groups/me/reports/49d2855c-8a61-40f8-9d9a-d3f427f68b62/ReportSectione90a9dd27c477665e969?experience=power-bi&bookmarkGuid=Bookmark83fa3b35183e0e2b2b26
+**Code:** [KenyaPulse GBV Dashboard](https://app.powerbi.com/groups/me/reports/49d2855c-8a61-40f8-9d9a-d3f427f68b62/ReportSectione90a9dd27c477665e969?experience=power-bi&bookmarkGuid=Bookmark83fa3b35183e0e2b2b26)
 
 ### Project Description
 
