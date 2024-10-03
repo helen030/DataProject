@@ -15,6 +15,7 @@ The dataset contains reported GBV cases in Kenya from 2017 to 2019, which was co
 The first step after loading the data into Power BI is data cleaning. This included imputing missing values where all null values were populated with the most common value in their respective columns. Furthermore, I verified that each field had the correct data type and there is no duplicate entries. Data profiling was also used to ensure the data met predefined quality standards. The data volume was within expected limits at over 1000 rows for the fact table and ranging from 2-13 fields across various dimension tables. 
 
 <img width="959" alt="GBV_ETL process" src="https://github.com/user-attachments/assets/33bfd3d9-150f-4ed0-8c23-ee3e6fba86e4">
+
 *Fig 1. Dataset after it was loaded and cleaned.*
 
 Then, I split the dataset into different dimension and fact tables to create a data model based on the Star Schema approach. This enhanced the data integrity and allowed for more accurate querying, filtering and slicing of data. 
