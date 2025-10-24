@@ -1,50 +1,24 @@
 # UNSW "Going Green" Dashboard
 
-**Code:** [GoingGreen Dashboard](https://github.com/helen030/DataProject/blob/987ed07c5e7e004d82e48fcaad4b7971d64d31ec/GoingGreen%20Dashboard/UNSW%20Going%20Green%20Dashboard.pbix)
+**Download Dashboard:** [GoingGreen Dashboard](https://github.com/helen030/DataProject/blob/bc43fa480910259d9968d9aee3b4b05a45c7a99f/Dashboards/UNSW%20Going%20Green%20Dashboard.pbix)
 
 ### Goals
 
-The dashboard aims to identify hotspots and trends in GBV incidents by pinpointing geographical areas and temporal patterns. It also investigates gender vulnerability by connecting different variables to understand contributing factors and assesses existing prevention programs and responses for effectiveness. A set of actionable recommendations is then provided to combat the situations and allocate resources more effectively.
+This project aims to bridge the gap between UNSW Accommodation utility consumption and its sustainability performance by building a centralised and integrated sustainability dashboard. This dashboard enables concerned stakeholders to make informed decisions, promote sustainable practices and drive targeted improvements based on demographic-specific data.
 
 ### Dataset Information
 
-The dataset contains reported GBV cases in Kenya from 2017 to 2019, which were collected from slum areas where the organisation operates. It includes sensitive information such as victim demographics, residential areas, case categories, reporting methods, and witness details.
+The dataset is generated from UNSW Accommodation's uncentralised event planning and resident management systems, including its utility consumption, waste generation, and resident demographic data.
 
-### Setup
+### Intuitive Design and Features
 
-The first step after loading the data into Power BI is data cleaning. This included imputing missing values where all null values were populated with the most common value in their respective columns. Furthermore, I verified that each field had the correct data type and there are no duplicate entries. Data profiling was also used to ensure the data met predefined quality standards. The data volume was within expected limits at over 1000 rows for the fact table and ranging from 2 to 13 fields across various dimension tables. 
+The dashboard is designed with usability and clarity in mind, offering an intuitive experience through a clean navigation bar for seamless page switching and a consistent layout supported by cohesive fonts and colour themes. Interactive filters, dropdown menus, and search functions allow users to tailor data views without cluttering. Features like data drilling and clear alert notifications further support viewing by surfacing critical insights quickly and efficiently. Help buttons and dedicated guidance pages are also included to enhance usability and assist new users to quickly familiarise with the dashboard.
 
-<img width="959" alt="GBV_ETL process" src="https://github.com/user-attachments/assets/33bfd3d9-150f-4ed0-8c23-ee3e6fba86e4">
+<img width="1173" height="534" alt="image" src="https://github.com/user-attachments/assets/e5cc61ee-7deb-4e17-b8c9-df01353dd134" />
 
-*Fig 1. Dataset after it was loaded and cleaned.*
+*Fig 1. Key design features of the dashboard interface.*
 
-Then, I split the dataset into different dimensions and fact tables to create a data model based on the Star Schema approach. This enhanced the data integrity and allowed for more accurate querying, filtering and slicing of data. 
+### Dashboard Findings
 
-<img width="504" alt="Screenshot 2024-09-18 152146" src="https://github.com/user-attachments/assets/4b78d83a-4512-4610-81e2-f87d1e03cced">
-
-*Fig 2. Star Schema data model.*
-
-### Dashboard Design and Creation
-
-With the processed data, I created a GBV dashboard that presents key insights on hotspots and temporal patterns, victim vulnerability, perpetrator profiles, and program impacts. The dashboard's visualisations help inform the organisation's decision-making process and guide targeted efforts to reduce case frequency, better victim support, and more effectively use resources.
-
-<img width="959" alt="Screenshot 2024-09-18 152547" src="https://github.com/user-attachments/assets/19f2b36c-fe62-4ee9-a8cc-955da8ffbe56">
-
-*Fig 3. Overview page of the dashboard.*
-
-In addition, I also added slicers and navigation buttons between pages to the dashboard. These slicers allow the user to filter the data by various criteria such as time, the victim's gender, and slum areas. These provide a more dynamic and interactive user experience, allowing the user to explore the data in greater detail and gain deeper insights.
-
-<img width="758" height="221" alt="image" src="https://github.com/user-attachments/assets/c2e76246-cb40-4386-bd1a-cab84ff7499e" />
-
-*Fig 4. Slicers in the dashboard.*
-
-### Findings and Conclusion
-
-The dashboard uncovers that women aged 25–34 face the highest burden of domestic abuse, with Kibera emerging as a hotspot of reported gender-based violence. Social and cultural norms in Kenya appear to reinforce gendered vulnerabilities, placing young women in harm’s way, while boys face greater risk of abuse during early childhood. Notably, the lack of well-wisher intervention suggests a powerful stigma within communities, where silence is often chosen over reporting signs of violence.
-
-<img width="1154" height="552" alt="image" src="https://github.com/user-attachments/assets/6b25f5ac-86a1-4c8e-b711-fda004833882" />
-
-*Fig 5. Key insights.*
-
-Overall, the dashboard turns raw GBV case data into actionable insights and delivers a data-driven foundation that allow stakeholders to quickly spot high-risk locations, vulnerable demographics, and recurring temporal patterns. With interactive filters, dynamic visuals, and multi-page navigation, it empowers users to explore causes, evaluate intervention effectiveness, and guide targeted prevention strategies.
+Analysis of the dataset reveals three major insights on UNSW Accommodation sustainability performance. 
 
