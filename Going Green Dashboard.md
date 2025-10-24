@@ -1,6 +1,6 @@
 # UNSW "Going Green" Dashboard
 
-**Code:** [GoingGreen Dashboard](dashboards/UNSW Going Green Dashboard.pbix)
+**Code:** [GoingGreen Dashboard](https://github.com/helen030/DataProject/blob/987ed07c5e7e004d82e48fcaad4b7971d64d31ec/GoingGreen%20Dashboard/UNSW%20Going%20Green%20Dashboard.pbix)
 
 ### Goals
 
