@@ -1,6 +1,6 @@
 # Analysing Customer Churn Rate & Prediction Models
 
-**View detailed report and analysis results:** [Churn Rate Analysis Report] TBU
+**View detailed report and analysis results:** [Churn Rate Analysis Report](https://github.com/helen030/DataProject/blob/96825a710f1a111a37822c6e2943bf01ed46137e/Dashboards/Churn%20Rate%20Analysis%20Report.pdf)
 
 **View full R code:** [Churn Rate Analysis R Script](https://github.com/helen030/DataProject/blob/ed5a5b3d4b1dc5747ef500187d4f533c7fba9ed9/Dashboards/Churn%20Rate%20Analysis%20%26%20Prediction%20Model.R)
 
@@ -18,19 +18,19 @@ Initial analysis revealed that nearly 30% of customers have churned, an alarming
 
 Notably, customers who stay with the company generated around 1.5x more monthly revenue than those who leave, highlighting the importance of reducing churn to maximise profitability for the company.
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4297abe9-57f5-4914-a957-48f446d9a3f0" />
+<img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/4297abe9-57f5-4914-a957-48f446d9a3f0" />
 
 *Fig 1. Numbers of Churned and Not Churned Customers.*
 
 Customer income has a strong influence on both spending behaviour and the likelihood of switching providers. Income group 0 has the highest churn rate, suggesting lower-income customers are more likely to leave. Interestingly, group 6 has the second-highest number of churned customers. Based on the assumption, this group is medium-income earners with stable financial and potentially better credit scores. 
 
-<img width="940" height="430" alt="image" src="https://github.com/user-attachments/assets/c44a9872-067f-4b83-a5fd-e7773d24d33d" />
+<img width="840" height="350" alt="image" src="https://github.com/user-attachments/assets/c44a9872-067f-4b83-a5fd-e7773d24d33d" />
 
 *Fig 2. Income Groups of Churned and Unchurned Customers.*
 
 Credit rating also matters. Customers with higher credit scores are more likely to churn, implying that financial stability gives customers more choices and makes them more value-conscious. Overall, lower-income customers are sensitive to cost, while higher-income ones are harder to retain due to their higher expectations and wider access to alternatives.
 
-<img width="839" height="344" alt="image" src="https://github.com/user-attachments/assets/bec03e2a-3d0d-44e6-bf12-0be443aea848" />
+<img width="640" height="370" alt="image" src="https://github.com/user-attachments/assets/bec03e2a-3d0d-44e6-bf12-0be443aea848" />
 
 *Fig 3. Credit Ratings for Unchurned and Churned Customers.*
 
@@ -46,7 +46,7 @@ Upon further investigation, I found that the issue is due to a major class imbal
 
 Further evaluation using Decile-wise lift chart and ROC curves confirmed that the Random Forest model performs moderately well (AUC = 56.9%), meaning it can identify high-risk customers better than random chance but still has room for improvement. This suggests that incorporating more behavioural variables or external data could strengthen future churn prediction accuracy.
 
-<img width="1278" height="398" alt="image" src="https://github.com/user-attachments/assets/be5fdfa2-e9eb-4815-9bab-a44c695d3a57" />
+<img width="900" height="350" alt="image" src="https://github.com/user-attachments/assets/be5fdfa2-e9eb-4815-9bab-a44c695d3a57" />
 
 *Fig 5. Assessing Random Forest Model Performance.*
 
