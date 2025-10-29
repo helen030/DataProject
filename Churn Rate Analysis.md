@@ -1,8 +1,8 @@
 # Analysing Customer Churn Rate & Prediction Models
 
-**View Full Report:** [Churn Rate Analysis](https://github.com/helen030/DataProject/blob/bc43fa480910259d9968d9aee3b4b05a45c7a99f/Dashboards/Kenya%20GBV%20Dashboard.pbix)
+**View Full Report:** [Churn Rate Analysis] TBU
 
-**View R Code:** [Analysis Script](https://github.com/helen030/DataProject/blob/bc43fa480910259d9968d9aee3b4b05a45c7a99f/Dashboards/Kenya%20GBV%20Dashboard.pbix)
+**View R Code:** [Analysis Script](https://github.com/helen030/DataProject/blob/ed5a5b3d4b1dc5747ef500187d4f533c7fba9ed9/Dashboards/Churn%20Rate%20Analysis%20%26%20Prediction%20Model.R)
 
 ### Goals
 
