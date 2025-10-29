@@ -42,7 +42,7 @@ In this portfolio, I have included a variety of projects that showcase my data a
 **Results:** Findings from generated models suggested that women are the primary consumers and appropriate pricing is the most significant factor impacting sales in the pain relief market. In addition, clear communication about the list of used ingredients, potential side effects and expected benefits is important to experience product success. 
 
 ### Customer Churn Rate Analysis of an American Telecommunication Company
-**Link:** [Predicting Customer Churn Rate.R] TBU
+**Link:** [Predicting Customer Churn Rate.R](https://github.com/helen030/DataProject/blob/b6729173e94afe1757f824b628cd6b30728ef1d5/Churn%20Rate%20Analysis.md)
 
 **Goal:** To understand customer behaviour and to accurately predict customer churn.
 
@@ -51,6 +51,3 @@ In this portfolio, I have included a variety of projects that showcase my data a
 **Technical Skills:** Data manipulation, data cleaning, descriptive data analysis, statistical modelling, web app development and hosting.
 
 **Technology:** R
-
-**Results:** 
-
