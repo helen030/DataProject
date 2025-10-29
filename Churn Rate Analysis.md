@@ -1,52 +1,55 @@
 # Analysing Customer Churn Rate & Prediction Models
 
-**View Full Report:** [Churn Rate Analysis] TBU
+**View detailed report and analysis results:** [Churn Rate Analysis Report] TBU
 
-**View R Code:** [Analysis Script](https://github.com/helen030/DataProject/blob/ed5a5b3d4b1dc5747ef500187d4f533c7fba9ed9/Dashboards/Churn%20Rate%20Analysis%20%26%20Prediction%20Model.R)
+**View full R code:** [Churn Rate Analysis R Script](https://github.com/helen030/DataProject/blob/ed5a5b3d4b1dc5747ef500187d4f533c7fba9ed9/Dashboards/Churn%20Rate%20Analysis%20%26%20Prediction%20Model.R)
 
-### Goals
+### Introduction
 
-The dashboard aims to identify hotspots and trends in GBV incidents by pinpointing geographical areas and temporal patterns. It also investigates gender vulnerability by connecting different variables to understand contributing factors and assesses the effectiveness of existing prevention programs and responses. A set of actionable recommendations is then provided to combat the situations and allocate resources more effectively.
+The project aims to analyse data of 30K+ customers of a telecommunication giant in the US and provide recommendations on how to predict customer churn and establish a target customer profile. 
 
-### Dataset Information
+### Setup - Data Manipulation & Cleaning
 
-The dataset contains reported GBV cases in Kenya from 2017 to 2019, which were collected from slum areas where the organisation operates. It includes sensitive information such as victim demographics, residential areas, case categories, reporting methods, and witness details.
+The first step is to remove any data that wasn't relevant to the analysis, such as handsets, equipment, and vehicle details. Next, I converted all categorical values into dummy variables (1 for “Yes”, 0 for “No”) and ensured that  all numbers were stored as numeric for easier analysis. Finally, I replaced N/A values with the average instead of removing them, since there weren't many and each customer record can provide useful insights to the analysis. 
 
-### Setup
+### Descriptive Analysis - What Contributes to Customer Decision to Leave?
 
-The first step after loading the data into Power BI is data cleaning. This included imputing missing values where all null values were populated with the most common value in their respective columns. Furthermore, I verified that each field had the correct data type and that there are no duplicate entries. Data profiling was also used to ensure the data met predefined quality standards. The data volume was within expected limits at over 1000 rows for the fact table and ranging from 2 to 13 fields across various dimension tables. 
+Initial analysis revealed that nearly 30% of customers have churned, an alarmingly high rate given the intense competition in the telecommunications industry. This indicates the company is not targeting the right audiences or leveraging effective strategies to keep its customers.
 
-<img width="800" alt="GBV_ETL process" src="https://github.com/user-attachments/assets/33bfd3d9-150f-4ed0-8c23-ee3e6fba86e4">
+Notably, customers who stay with the company generated around 1.5x more monthly revenue than those who leave, highlighting the importance of reducing churn to maximise profitability for the company.
 
-*Fig 1. Dataset after it was loaded and cleaned.*
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4297abe9-57f5-4914-a957-48f446d9a3f0" />
 
-Then, I split the dataset into different dimensions and fact tables to create a data model based on the Star Schema approach. This enhanced the data integrity and allowed for more accurate querying, filtering and slicing of data. 
+*Fig 1. Numbers of Churned and Not Churned Customers.*
 
-<img width="400" height="400" alt="Screenshot 2024-09-18 152146" src="https://github.com/user-attachments/assets/4b78d83a-4512-4610-81e2-f87d1e03cced">
+Customer income has a strong influence on both spending behaviour and the likelihood of switching providers. Income group 0 has the highest churn rate, suggesting lower-income customers are more likely to leave. Interestingly, group 6 has the second-highest number of churned customers. Based on the assumption, this group is medium-income earners with stable financial and potentially better credit scores. 
 
-*Fig 2. Star Schema data model.*
+<img width="940" height="430" alt="image" src="https://github.com/user-attachments/assets/c44a9872-067f-4b83-a5fd-e7773d24d33d" />
 
-### Dashboard Design and Creation
+*Fig 2. Income Groups of Churned and Unchurned Customers.*
 
-With the processed data, I created a GBV dashboard that presents key insights on hotspots and temporal patterns, victim vulnerability, perpetrator profiles, and program impacts. The dashboard's visualisations help inform the organisation's decision-making process and guide targeted efforts to reduce case frequency, better victim support, and more effectively use resources.
+Credit rating also matters. Customers with higher credit scores are more likely to churn, implying that financial stability gives customers more choices and makes them more value-conscious. Overall, lower-income customers are sensitive to cost, while higher-income ones are harder to retain due to their higher expectations and wider access to alternatives.
 
-<img width="850" height="450" alt="Screenshot 2024-09-18 152547" src="https://github.com/user-attachments/assets/19f2b36c-fe62-4ee9-a8cc-955da8ffbe56">
+<img width="839" height="344" alt="image" src="https://github.com/user-attachments/assets/bec03e2a-3d0d-44e6-bf12-0be443aea848" />
 
-*Fig 3. Overview page of the dashboard.*
+*Fig 3. Credit Ratings for Unchurned and Churned Customers.*
 
-Additionally, I added slicers and navigation buttons between pages to the dashboard. These slicers allow the user to filter the data by various criteria such as time, the victim's gender, and slum areas. These provide a more dynamic and interactive user experience, allowing the user to explore the data in greater detail and gain deeper insights.
+### Predictive Modelling – Identifying At-Risk Customers
 
-<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/c2e76246-cb40-4386-bd1a-cab84ff7499e" />
+Using a 70/30 train-test split on 30,000 customer records, I trained three models: a Random Forest, KNN, and Naïve Bayes, to predict which customers are likely to churn. Initial results showed all models achieved reasonable accuracy but had significantly low sensitivity, meaning they struggled to correctly identify churned customers. In fact, they were better at identifying customers who are likely NOT to churn.
 
-*Fig 4. Slicers in the dashboard.*
+Upon further investigation, I found that the issue is due to a major class imbalance, with only 29% data reflecting churned customers. To address this, I applied different balancing techniques such as random oversampling and undersampling. As a result, the random undersampling Random Forest achieved the best trade-off between accuracy and sensitivity, making it the most suitable model for this task.
 
-### Findings and Conclusion
+<img width="875" height="166" alt="image" src="https://github.com/user-attachments/assets/9f9f081f-8f44-4b20-9ab0-a56c004f9c85" />
 
-The dashboard uncovers that women aged 25–34 face the highest burden of domestic abuse, with Kibera emerging as a hotspot of reported gender-based violence. Social and cultural norms in Kenya appear to reinforce gendered vulnerabilities, placing young women in harm’s way, while boys face a greater risk of abuse during early childhood. Notably, the lack of well-wisher intervention suggests a powerful stigma within communities, where silence is often chosen over reporting signs of violence.
+*Fig 4. Performance measures of Random Forest Models.*
 
-<img width="770" height="350" alt="image" src="https://github.com/user-attachments/assets/6b25f5ac-86a1-4c8e-b711-fda004833882" />
+Further evaluation using Decile-wise lift chart and ROC curves confirmed that the Random Forest model performs moderately well (AUC = 56.9%), meaning it can identify high-risk customers better than random chance but still has room for improvement. This suggests that incorporating more behavioural variables or external data could strengthen future churn prediction accuracy.
 
-*Fig 5. Key insights.*
+<img width="1278" height="398" alt="image" src="https://github.com/user-attachments/assets/be5fdfa2-e9eb-4815-9bab-a44c695d3a57" />
 
-Overall, the dashboard turns raw GBV case data into actionable insights and delivers a data-driven foundation that allow stakeholders to quickly spot high-risk locations, vulnerable demographics, and recurring temporal patterns. With interactive filters, dynamic visuals, and multi-page navigation, it empowers users to explore causes, evaluate intervention effectiveness, and guide targeted prevention strategies.
+*Fig 5. Assessing Random Forest Model Performance.*
 
+### Conclusion
+
+The analysis revealed that retention calls, household age, and income level are the three strongest predictors of customer churn. These insights can support the company in designing more targeted and data-driven retention strategies.
