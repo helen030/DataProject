@@ -1,6 +1,6 @@
 # Kenya's Gender-Based Violence Dashboard
 
-**View Full Dashboard:** [Kenya GBV Dashboard](https://github.com/helen030/DataProject/blob/bc43fa480910259d9968d9aee3b4b05a45c7a99f/Dashboards/Kenya%20GBV%20Dashboard.pbix)
+**Download to view the full dashboard:** [Kenya GBV Dashboard](https://github.com/helen030/DataProject/blob/bc43fa480910259d9968d9aee3b4b05a45c7a99f/Dashboards/Kenya%20GBV%20Dashboard.pbix)
 
 ### Goals
 
